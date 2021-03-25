@@ -1,5 +1,7 @@
 import React from "react";
-import FunctionalClickCounter from "./component/FunctionalClickCounter";
+import ClassClickCounter from "./components/ClassClickCounter";
+import FunctionalClickCounter from "./components/FunctionalClickCounter";
+
 
 function App() {
   return (
@@ -7,6 +9,12 @@ function App() {
       <FunctionalClickCounter initialValue={6} />
       <FunctionalClickCounter initialValue={10} />
       <FunctionalClickCounter initialValue={4} />
+      
+      <hr/>
+
+      <ClassClickCounter initialValue={6} />
+      <ClassClickCounter initialValue={10} />
+      <ClassClickCounter initialValue={4} />
     </div>
   );
 }
