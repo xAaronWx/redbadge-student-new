@@ -1,10 +1,12 @@
 import React from "react";
-import FunctionFetchOnload from "./components/FunctionFetchOnload";
+import ClassFetchOnload from "./components/ClassFetchOnload";
+// import FunctionFetchOnload from "./components/FunctionFetchOnload";
 
 function App() {
   return (
     <div>
-      <FunctionFetchOnload />
+      {/* <FunctionFetchOnload /> */}
+      <ClassFetchOnload />
     </div>
   );
 }
