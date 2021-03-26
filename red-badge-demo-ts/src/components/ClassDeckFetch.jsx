@@ -4,7 +4,7 @@ class ClassDeckFetch extends Component {
 
   constructor(props){
     super(props);
-    this.state = {deckID: ''}
+    this.state = {deckID: '', cardImage: ''}
   }
   fetchDeck(){
     //What's URL are we fetching
@@ -13,7 +13,17 @@ class ClassDeckFetch extends Component {
 
     fetch(url)
     .then(res => res.json())
-    .then(json => console.log(json));
+    .then(json => this.setState({deckID: json.deck_id}));
+  }
+
+  fetchCard(){
+    //What's URL are we fetching
+    // Store the data from the fetch
+    const url = `https://deckofcardsapi.com/api/deck/${this.state.deckID}/draw/?count=2`;
+
+    fetch(url)
+    .then(res => res.json())
+    .then(json => this.setState({cardImage: json.cards[0].image}));
   }
 
   //cdm shortcut
@@ -21,15 +31,21 @@ class ClassDeckFetch extends Component {
     this.fetchDeck();
   }
   
+  //cdu
+  componentDidUpdate(prevProps, prevState) {
+    if(prevState.deckID !== this.state.deckID){
+    this.fetchCard()
+    }
+  }
 
   render(){
     return(
       <div>
-        Hello
+        <img src={this.state.cardImage} alt=""/>
       </div>
     )
   }
 
 
 }
-export default ClassDeckFetch;
+export default ClassDeckFetch
