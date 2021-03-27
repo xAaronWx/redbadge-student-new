@@ -35,3 +35,4 @@ console.log(weather.temp);
 //   cloudCondition: "overcast",
 //   next5Day: [81, 75, 69, 78],
 // };
+//# sourceMappingURL=learning-ts.js.map
