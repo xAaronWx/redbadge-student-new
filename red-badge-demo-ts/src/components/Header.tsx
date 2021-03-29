@@ -1,11 +1,9 @@
 import * as React from "react";
 
-export interface HeaderProps {
-  
-}
- 
+export interface HeaderProps {}
+
 const Header: React.SFC<HeaderProps> = () => {
-  return (  );
-}
- 
+  return <h1>Click to Roll Dice</h1>;
+};
+
 export default Header;

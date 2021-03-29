@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import dice1 from "./pictures/dice1.png";
 import dice2 from "./pictures/dice2.png";
 import dice3 from "./pictures/dice3.png";
@@ -34,7 +34,7 @@ const Dice: React.SFC<DiceProps> = (props) => {
   }
 
   return (
-    <div>
+    <div className="dice">
       <p>{props.playerName}</p>
       <img src={diceToShow} alt="" />
     </div>

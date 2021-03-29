@@ -1,11 +1,9 @@
-import * as React from 'react';
+import * as React from "react";
 
-export interface FooterProps {
-  
-}
- 
+export interface FooterProps {}
+
 const Footer: React.SFC<FooterProps> = () => {
-  return (  );
-}
- 
+  return <footer> Let them Roll 🎲 🎲</footer>;
+};
+
 export default Footer;
